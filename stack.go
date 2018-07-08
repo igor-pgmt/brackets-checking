@@ -7,7 +7,7 @@ type filo struct {
 	stack []rune
 }
 
-// Add character to the stack
+// push adds character to the stack
 func (f *filo) push(r rune) {
 	f.stack = append(f.stack, r)
 }
