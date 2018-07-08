@@ -31,7 +31,7 @@ func (s *StringToParse) Parse() error {
 	}
 	// if there are some unclosed characters
 	if len(checkStack.stack) > 0 {
-		return errors.New("Отсутствуют закрывающие скобки для: \"" + string(checkStack.stack[len(checkStack.stack)-1]) + "\"")
+		return errors.New("Отсутствует закрывающая скобка для: \"" + string(checkStack.stack[len(checkStack.stack)-1]) + "\"")
 	}
 
 	return nil

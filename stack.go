@@ -2,7 +2,7 @@ package main
 
 import "errors"
 
-// filo is First-In-Last-Out structure aka "stack"
+// filo is the First-In-Last-Out structure aka "stack"
 type filo struct {
 	stack []rune
 }

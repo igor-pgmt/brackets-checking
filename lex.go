@@ -5,7 +5,7 @@ type lexPair struct {
 	open, close rune
 }
 
-// checkOpen checks
+// checkOpen checks if the input rune is an opening bracket or not
 func (lp *lexPair) checkOpen(s rune) bool {
 	if lp.open == s {
 		return true
@@ -24,8 +24,9 @@ var lp = lexPairs{
 	{'<', '>'},
 }
 
-// isLex returns a lexical pair for the input rune (if exist)
-// and a character type: "true" for the opening symbol and "false" for the closing symbol.
+// isLex checks if the rune has a lexical pair
+// and returns both the pair and information about the bracket:
+// "true" for the opening symbol and "false" for the closing symbol.
 func (lp *lexPairs) isLex(s rune) (*lexPair, bool) {
 	for _, pair := range *lp {
 		if pair.open == s {
